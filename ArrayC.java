@@ -31,6 +31,18 @@ public class ArrayC {
         return largest;
     }
 
+    public static int smallestNumber(int numbers[]) {
+        int smallest = Integer.MAX_VALUE;
+        System.out.println(smallest);
+        for (int i = 0; i < numbers.length; i++) {
+            // largest = Math.max(largest,numbers[i]);
+            if (smallest > numbers[i]) {
+                smallest = numbers[i];
+            }
+        }
+        return smallest;
+    }
+
     public static int BinarySearch(int numbers[], int key) {
         int start = 0;
         int end = numbers.length - 1;
@@ -73,6 +85,7 @@ public class ArrayC {
 
     public static void SubArrays(int numbers[]){
         int n = numbers.length;
+    
         for(int i=0; i<n; i++){
             int start = i;
             for(int j=i; j<n; j++){
@@ -142,6 +155,9 @@ public class ArrayC {
         // ArrayPair(numbers);
 
         SubArrays(numbers);
+
+
+
 
 
     }
