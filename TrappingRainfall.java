@@ -22,7 +22,6 @@ public class TrappingRainfall{
         // for(int i=0; i<n; i++){
         //     System.out.print(rightMaxBoun[i] + " ");
         // }
-
         // loop
         // waterlevel = min(leftMax bound- rightMax bound);
         // trappingWater = waterlevel - height[i];
