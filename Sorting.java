@@ -81,16 +81,16 @@ public class Sorting {
 
     public static void main(String[] args) {
         // int arr[] = {4,2,1,5,3}; 
-        // Integer arr[] = {4,2,1,5,3}; 
         // bubbleSort(arr);       
         // selectionSort(arr);       
         // insertionSort(arr);
-
+        
         // Arrays.sort(arr, 0,3);
         // for(int i=0; i<arr.length; i++){
-        //     System.out.print(arr[i]+" ");
-        // }
-        
+            //     System.out.print(arr[i]+" ");
+            // }
+            
+        // Integer arr[] = {4,2,1,5,3};  //We use reverse sort array functionality only on objects so, i create Integer object of array.
         // Arrays.sort(arr,2, arr.length , Collections.reverseOrder());
         // for(int i=0; i<arr.length; i++){
         //     System.out.print(arr[i]+" ");

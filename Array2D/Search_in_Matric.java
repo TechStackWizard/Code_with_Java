@@ -2,7 +2,7 @@ package Array2D;
 
 public class Search_in_Matric {
 
-    public static boolean keyInMatric(int arr[][], int key){
+    public static boolean staireSearching(int arr[][], int key){
         int row = 0, col = arr[0].length-1;
 
         while(row < arr.length && col >= 0){
@@ -27,6 +27,6 @@ public class Search_in_Matric {
                         {15,25,35,45},
                         {27,29,31,33},
                         {38, 42, 46, 55}};
-        keyInMatric(arr, 35);
+        staireSearching(arr, 35);
     }
 }
