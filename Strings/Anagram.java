@@ -16,8 +16,6 @@ public class Anagram{
 
             boolean isAnaram = Arrays.equals(charArray1, charArray2);
 
-            
-
             if(isAnaram){
                 System.out.println(str1 + " and " + str2 + " are anagram string");
             }

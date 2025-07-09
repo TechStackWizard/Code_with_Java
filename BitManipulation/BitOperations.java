@@ -39,20 +39,20 @@ public class BitOperations {
     }
 
     public static int clearIBitRange(int n, int i, int j){
-        int a = (~0 & (1 << j+1));
-        int b = (1 << i-1) - 1;
+        int a = ((~0) & (1 << j+1));
+        int b = (1 << i) - 1;
 
-        return a | b;
+        return n & (a | b);
     }
 
     public static void main(String[] args) {
-        System.out.println(getIthBit(5, 2));
-        System.out.println(setIthBit(5, 1));
-        System.out.println(clearIthBit(13, 2));
-        System.out.println(updateIthBit(10, 3, 0));
-        System.out.println(clearLastIthBits(15, 2));
+        // System.out.println(getIthBit(5, 2));
+        // System.out.println(setIthBit(5, 1));
+        // System.out.println(clearIthBit(13, 2));
+        // System.out.println(updateIthBit(10, 3, 0));
+        // System.out.println(clearLastIthBits(15, 2));
 
-        System.out.println(clearIBitRange(50, 2, 4));
+        System.out.println(clearIBitRange(10, 2, 4));
         
         
     }
