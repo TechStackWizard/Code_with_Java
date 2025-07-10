@@ -25,10 +25,25 @@ public class Problems {
         return count;
     }
 
+    public static int getPowerOfN(int a , int n){
+        int ans = 1;
+
+        while(n>0){
+            if((n & 1) != 0){
+                ans = a*ans;
+            }
+            a = a*a;
+            n = n>>1;
+        }
+        return ans;
+    }
+
 
 
     public static void main(String[] args) {
+        System.out.println(Math.log(5));
         System.out.println(checkPowerOfTwo(0));
         System.out.println(countSetBits(7));
+        System.out.println(getPowerOfN(2, 4));
     }
 }
