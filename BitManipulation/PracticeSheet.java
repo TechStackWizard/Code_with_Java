@@ -30,8 +30,25 @@ public class PracticeSheet {
         System.out.println("After swaped a "+a+" and b "+b);
     }
 
+    public static void upperToLower(){
+        for(char ch='A'; ch<='Z'; ch++){
+            System.out.print((char)((int)ch+32));
+        }
+        System.out.println();
+
+        for(char ch='A'; ch<='Z'; ch++){
+            System.out.print((char)(ch | ' '));
+        }
+    }
+
+
+
+    // public static void 
+
     public static void main(String[] args) {
-        System.out.println(findNumOfNum(3));
-        swap2Num(4,8);      
+        // System.out.println(findNumOfNum(3));
+        // swap2Num(4,8);
+        // System.out.println(-(~7));
+        upperToLower();
     }
 }
