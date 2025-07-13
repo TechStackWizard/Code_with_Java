@@ -39,12 +39,12 @@ class Student {
     }
 
     // Copy Constructor or shallow copy Constructor
-    Student(Student s1) {
-    marks = new int[3];
-    this.name = s1.name;
-    this.roll = s1.roll;
-    this.marks = s1.marks;
-    }
+    // Student(Student s1) {
+    // marks = new int[3];
+    // this.name = s1.name;
+    // this.roll = s1.roll;
+    // this.marks = s1.marks;
+    // }
 
     // Deep Copy
     Student(Student s1) {
