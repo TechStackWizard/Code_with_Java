@@ -25,11 +25,11 @@ public class TypeOfInheritence {
         // // Dog sefered = new Dog();
         // sefered.sound();
         
-
-        Shape circle = new Circle(5);
-        circle.calculateArea();
-        Shape rec = new Rectangle(10, 20);
-        rec.calculateArea();
+        // Abstraction
+        // Shape circle = new Circle(5);
+        // circle.calculateArea();
+        // Shape rec = new Rectangle(10, 20);
+        // rec.calculateArea();
     }
 }
 
@@ -244,7 +244,6 @@ public class TypeOfInheritence {
 // Shape	Circle, Rectangle	calculateArea()
 
 abstract class Shape{
-   
     abstract void calculateArea();
 }
 
@@ -273,6 +272,36 @@ class Rectangle extends Shape{
         System.out.println("Area of rectangle is : "+ length *breath);
     }
 }
+
+//When we create an object using the Cat class, the constructor chain first calls the parent class constructor, and then the subclass (Cat) constructor;
+
+abstract class Animal{
+    Animal(){
+        System.out.println("Animal constructor called");
+    }
+}
+
+class Dog extends Animal{
+    Dog(){
+        System.out.println("Dog constructor called");
+    }
+}
+
+class Cat extends Dog{
+    Cat(){
+        System.out.println("Cat constructor called");
+    }
+}
+
+
+// Interfaces :- Interfaces are the blueprint of classes
+interface InnerTypeOfInheritence {
+
+
+    
+}
+
+
 
 
 
