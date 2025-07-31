@@ -1,7 +1,6 @@
 package ArrayListPackage;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class PairSum2 {
     public static Boolean isPairExists(ArrayList<Integer> list, int target) {
