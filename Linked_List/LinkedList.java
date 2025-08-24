@@ -33,8 +33,13 @@ public class LinkedList {
 
     void addEnd(int data) {
         Node newNode = new Node(data);
-        tail.next = newNode;
-        tail = newNode;
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = tail.next;
+        }
         size++;
     }
 
@@ -196,16 +201,65 @@ public class LinkedList {
         return;
     }
 
+    public Node findMid() {
+        Node slow = head;
+        Node fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;// +1
+            fast = fast.next.next;// +2
+        }
+
+        return slow;
+    }
+
+    public boolean checkPolindrome() {
+        // Base Case
+        if (head == null || head.next == null) {
+            return true;
+        }
+
+        // find midNode
+        Node midNode = findMid();
+
+        // reverse 2nd half
+        Node prev = null;
+        Node curr = midNode;
+        Node next;
+
+        while (curr != null) {
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        Node right = prev; // 2nd half head
+        Node left = head;
+
+        // compare 1st half with 2nd half
+        while (right != null) {
+            if (right.data != left.data) {
+                return false;
+            }
+            right = right.next;
+            left = left.next;
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
-        ll.addFirst(3);
-        ll.addFirst(2);
-        ll.addFirst(1);
+        // ll.addFirst(3);
+        // ll.addFirst(2);
+        // ll.addFirst(1);
 
-        ll.addEnd(11);
-        ll.addEnd(12);
+        ll.addEnd(1);
+        ll.addEnd(2);
+        ll.addEnd(2);
+        ll.addEnd(1);
 
-        ll.addMiddle(4, 3);
+        // ll.addMiddle(4, 3);
 
         ll.display();
         // System.out.println(size);
@@ -227,8 +281,14 @@ public class LinkedList {
 
         // ll.reverse();
 
-        ll.deleteNthFromEnd(4);
-        ll.display();
+        // ll.deleteNthFromEnd(4);
+        // ll.display();
+
+        // Node temp = ll.findMid();
+        // System.out.println(temp.data);
+
+        // ll : 1->2->2->1
+        System.out.println(ll.checkPolindrome());
 
     }
 }
