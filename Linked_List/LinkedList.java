@@ -1,19 +1,19 @@
 package Linked_List;
 
 // public static Node head;
+
 // public static Node tail;
 
-class Node {
-    int data;
-    Node next;
-
-    Node(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
-
 public class LinkedList {
+    class Node {
+        int data;
+        Node next;
+
+        Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
 
     public static Node head;
     public static Node tail;
