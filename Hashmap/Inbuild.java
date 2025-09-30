@@ -3,7 +3,7 @@ package Hashmap;
 import java.util.HashMap;
 import java.util.Set;
 
-public class Implementation {
+public class Inbuild {
 
     public static void main(String[] args) {
         HashMap<String, Integer> hm = new HashMap<>();
