@@ -15,7 +15,6 @@ public class PracticeSet {
 
     public static void unionIntersection(int a[], int b[]) {
         HashSet<Integer> set = new HashSet<>();
-        HashSet<Integer> intersection = new HashSet<>();
 
         for (int i = 0; i < a.length; i++) {
             set.add(a[i]);

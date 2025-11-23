@@ -68,6 +68,51 @@ public class Practice {
         }
     }
 
+    // optimized solution for next greater element with time complexity O(n)
+    public static void nextGreaterOptimize(int arr[]) {
+        Stack<Integer> stack = new Stack<>();
+        int nextGreater[] = new int[arr.length];
+
+        for (int i = arr.length - 1; i >= 0; i--) {
+            int curr = arr[i];
+            while (!stack.isEmpty() && arr[stack.peek()] <= curr) {
+                stack.pop();
+            }
+            nextGreater[i] = stack.isEmpty() ? -1 : arr[stack.peek()];
+            stack.push(i);
+        }
+
+        for (int i = 0; i < nextGreater.length; i++) {
+            System.out.print(nextGreater[i] + " ");
+        }
+    }
+
+    public static void stockSpan(int arr[]) {
+        Stack<Integer> stack = new Stack<>();
+        int span[] = new int[arr.length];
+        span[0] = 1;
+        stack.push(0);
+
+        for (int i = 1; i < arr.length; i++) {
+            int currPrice = arr[i];
+            while (!stack.isEmpty() && arr[stack.peek()] <= currPrice) {
+                stack.pop();
+            }
+
+            if (stack.isEmpty()) {
+                span[i] = i == arr.length - 1 ? i + 1 : 1;
+
+            } else {
+                span[i] = i - stack.peek();
+            }
+            stack.push(i);
+        }
+
+        for (int i = 0; i < span.length; i++) {
+            System.out.print(span[i] + " ");
+        }
+    }
+
     public static void main(String[] args) {
         Stack<Integer> s = new Stack<>();
         s.push(1);
@@ -83,7 +128,11 @@ public class Practice {
         // reverseStack(s);
         // printStack(s); // 3->2->1
 
-        int arr[] = { 6, 8, 0, 1, 3 };
-        greaterAtRight(arr);
+        // int arr[] = { 6, 8, 0, 1, 3 };
+        // greaterAtRight(arr);
+        // nextGreaterOptimize(arr);
+
+        int arr[] = { 100, 80, 60, 70, 60, 85, 20 };
+        stockSpan(arr);
     }
 }

@@ -20,7 +20,6 @@ public class QueueA {
                 System.out.println("Queue is full");
                 return;
             }
-
             rear++;
             arr[rear] = data;
         }
@@ -36,6 +35,7 @@ public class QueueA {
             for (int i = 0; i < size - 1; i++) {
                 arr[i] = arr[i + 1];
             }
+            size--;
 
             return front;
         }
@@ -51,9 +51,10 @@ public class QueueA {
         }
 
         public static void display() {
-            for (int i = 0; i < arr.length; i++) {
-                System.out.println(arr[i]);
+            for (int i = 0; i < size; i++) {
+                System.out.print(arr[i] + " ");
             }
+            System.out.println();
         }
     }
 
@@ -65,6 +66,10 @@ public class QueueA {
         q.add(3);
 
         q.display();
+        System.out.println(q.remove());
+        q.display();
+        System.out.println(q.peek());
+
     }
 
 }
